@@ -28,11 +28,11 @@ var fragments = function (text)
 
     var mapping = {
         button: element.bind(null, by.class('btn btn-default')),
-        type: element,
+        type: element.bind(null, by.css('fifa.PolandRank')),
         fifa: element.bind(null, by.class('table-responsive')),
-        rank: element.bind(null, by.class('text-center')),
-        team: element.bind(null,by.class('text-center')),
-        totalPoints: element.bind(null,by.class('text-center'))
+        rank: element.bind(null, by.css('td:nth-of-type(1)')),
+        team: element.bind(null,by.css('td:nth-of-type(2)')),
+        totalPoints: element.bind(null,by.css('td:nth-of-type(3)'))
 
 
     };
