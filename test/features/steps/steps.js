@@ -30,7 +30,7 @@ module.exports = function ()
             }
         });
     }
-
+    //------------------------------------------------------------------------------------------
     this.When(/^I enter "(.*)" into "(.*)" field$/, function (text, name, callback)
     {
         var webElement = fragments(name)();
@@ -42,7 +42,7 @@ module.exports = function ()
 
         expect(element(by.css(cssClass)).getText()).to.eventually.equal(text).and.notify(callback);
     });
-
+    //-----------------------------------------------------------------------------------------------
     this.Then(/^I should see "([^"]*)" in "([^"]*)" column in row "(\d+)" of "([^"]*)" table$/, function (expectedText, columnName, row, table, callback)
     {
         row = parseInt(row, 10);
